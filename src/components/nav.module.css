@@ -1,0 +1,12 @@
+.mainNav {
+  display: flex;
+  align-content: stretch;
+  margin: 20px 30px;
+  font-family: Myriad Pro;
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.navLink {
+
+}
