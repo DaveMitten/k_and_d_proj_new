@@ -2,7 +2,7 @@ import React from 'react'
 import Why from '../components/why'
 import LatestRecipes from '../components/latestRecipes'
 import LatestArticles from '../components/latestArticles'
-import Layout from '../components/layout'
+import Layout from '../layouts/layout'
 
 export default () => (
   <Layout>
@@ -10,4 +10,4 @@ export default () => (
     <LatestRecipes />
     <LatestArticles />
   </Layout>
-)
+);

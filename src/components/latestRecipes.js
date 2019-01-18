@@ -1,5 +1,5 @@
 import React, { Component } from 'react' 
-import { graphql } from 'gatsby'
+// import { graphql } from 'gatsby'
 
 
 // import styled from 'styled-components'
@@ -14,10 +14,6 @@ class LatestRecipes extends Component {
 		<div style= {{ backgroundColor: `#d5e700`, display: `inline`, fontWeight: `900`, margin: `20px`, fontSize: `24px`}}>
       LATEST RECIPES</div>
       <div>
-
-
-
-        
       </div>
       </div>
 		</div>
@@ -27,6 +23,5 @@ class LatestRecipes extends Component {
 
 export default LatestRecipes
 
-export const query = graphql`
-# query will go here
-`
+// export const query = graphql`
+
