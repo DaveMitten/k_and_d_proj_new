@@ -74,7 +74,7 @@ const NavLinkText = styled.div`
               </NavLinkText>
               </NavLink>
 
-          <NavLink to="/RecipeMain">
+          <NavLink to="/recipes">
             <NavImg src={logoPickle} alt="logoPickle" />
             <NavLinkText>
               RECIPES

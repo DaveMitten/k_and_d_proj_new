@@ -3,10 +3,10 @@ import { graphql } from 'gatsby'
 import { Link } from 'gatsby-link'
 
 // import layout from '../layouts/layout';
-// import Layout from '../layouts/RecipeLayout';
+import Layout from '../layouts/RecipeLayout';
 
 
-const BlogPost = ({node}) => {
+const RecipePost = ({node}) => {
   return (
     <li>
       {/* <img src={node.featureImage.responsiveResolution.src}/> */}
@@ -16,9 +16,12 @@ const BlogPost = ({node}) => {
   )
 }
 const IndexPage = ({data}) => (
-  <ul className='blog-post'>
-    {data.all.edges.map((edge) => <BlogPost node={edge.node} />)}
+		<Layout>  
+      <ul>
+    {data.all.edges.map((edge) => <RecipePost node={edge.node} />)}
   </ul>
+	</Layout>
+
 )
 
 export default IndexPage
@@ -36,11 +39,9 @@ export const pageQuery = graphql`
 						recipeTitle
 						id
             slug
-            recipeMain 
           }
         }
-    }}
-   
+    }} 
 `
 
 // childMarkdownRemark {
