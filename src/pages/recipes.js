@@ -1,131 +1,131 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Link } from 'gatsby-link'
+// import React from 'react'
+// import { graphql } from 'gatsby'
+// import { Link } from 'gatsby-link'
 
-// import layout from '../layouts/layout';
-import Layout from '../layouts/RecipeLayout';
+// // import layout from '../layouts/layout';
+// import Layout from '../layouts/RecipeLayout';
 
 
-const RecipePost = ({node}) => {
-  return (
-    <li>
-      {/* <img src={node.featureImage.responsiveResolution.src}/> */}
-      <Link to={node.slug}><h3>{node.title}</h3></Link>
-      {/* <div>{node.content.childMarkdownRemark.excerpt}</div> */}
-    </li>
-  )
-}
-const IndexPage = ({data}) => (
-		<Layout>  
-      <ul>
-    {data.all.edges.map((edge) => <RecipePost node={edge.node} />)}
-  </ul>
-	</Layout>
-
-)
-
-export default IndexPage
-
-export const pageQuery = graphql`
-   query pageQuery {
-    allContentfulRecipe (
-    filter: {
-      node_locale: {eq: "en-US"}
-    },
-    sort:{ fields: [dateAndTime], order: DESC }
-    ) {
-        edges {
-          node {
-						recipeTitle
-						id
-            slug
-          }
-        }
-    }} 
-`
-
-// childMarkdownRemark {
-// 	excerpt
+// const RecipePost = ({node}) => {
+//   return (
+//     <li>
+//       {/* <img src={node.featureImage.responsiveResolution.src}/> */}
+//       <Link to={node.slug}><h3>{node.title}</h3></Link>
+//       {/* <div>{node.content.childMarkdownRemark.excerpt}</div> */}
+//     </li>
+//   )
 // }
+// const IndexPage = ({data}) => (
+// 		<Layout>  
+//       <ul>
+//     {data.all.edges.map((edge) => <RecipePost node={edge.node} />)}
+//   </ul>
+// 	</Layout>
 
-// {
-// 	responsiveResolution(width: 300, height: 300) {
-// 		src
-// 	}
-// }
+// )
 
-// mainImage
+// export default IndexPage
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export default ({ data }) => {
-// 	return (
-// 	<Layout>
-// 	{console.log(data)}
-// 	  <h3>{data.contentfulRecipe.recipeTitle} </h3>
-
-//     <div><img src='{data.contentfulRecipe.mainImage.file.url}' alt=""/></div>
-
-//   </Layout>
-// )}
-
-// export const query = graphql`
-//   query
-//     contentfulRecipe {
-//       recipeTitle
-//       mainImage {
-//         file {
-//           url
-//           fileName
-//           contentType
+// export const pageQuery = graphql`
+//    query pageQuery {
+//     allContentfulRecipe (
+//     filter: {
+//       node_locale: {eq: "en-US"}
+//     },
+//     sort:{ fields: [dateAndTime], order: DESC }
+//     ) {
+//         edges {
+//           node {
+// 						recipeTitle
+// 						id
+//             slug
+//           }
 //         }
-//       }
-//     }
-//   }
-// `;
+//     }} 
+// `
 
-// const RecipeMain = () => (
-//   <StaticQuery
-//     query={graphql`
-//       query {
-//         contentfulRecipe {
-//           recipeTitle
-//         }
-//       }
-//     `}
-//     render={data => (
-//       <layout>
-//         <h1>{data.contentfulRecipe.recipeTitle}</h1>
-//       </layout>
-//     )}
-//   />
-// );
+// // childMarkdownRemark {
+// // 	excerpt
+// // }
+
+// // {
+// // 	responsiveResolution(width: 300, height: 300) {
+// // 		src
+// // 	}
+// // }
+
+// // mainImage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // export default ({ data }) => {
+// // 	return (
+// // 	<Layout>
+// // 	{console.log(data)}
+// // 	  <h3>{data.contentfulRecipe.recipeTitle} </h3>
+
+// //     <div><img src='{data.contentfulRecipe.mainImage.file.url}' alt=""/></div>
+
+// //   </Layout>
+// // )}
+
+// // export const query = graphql`
+// //   query
+// //     contentfulRecipe {
+// //       recipeTitle
+// //       mainImage {
+// //         file {
+// //           url
+// //           fileName
+// //           contentType
+// //         }
+// //       }
+// //     }
+// //   }
+// // `;
+
+// // const RecipeMain = () => (
+// //   <StaticQuery
+// //     query={graphql`
+// //       query {
+// //         contentfulRecipe {
+// //           recipeTitle
+// //         }
+// //       }
+// //     `}
+// //     render={data => (
+// //       <layout>
+// //         <h1>{data.contentfulRecipe.recipeTitle}</h1>
+// //       </layout>
+// //     )}
+// //   />
+// // );
