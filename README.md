@@ -1,12 +1,19 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site.
+# Lifestyle Blog
+## Purpose
+Create a blog that has a headless CMS (contentful) and uses graphQl to fetch the data and dynamicly display. It is hosted on netlify.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
+## Use
 
-Or [view the live demo here](https://gatsby-starter-hello-world-demo.netlify.com/).
+It is for lifestyle blog articles and recipes. It will allow a user to create an article or recipe following the schemas in the contentful CMS that will then dynamicly create pages automatically in the blog. 
 
-## Running in development
-`gatsby develop`
+## Current Goals:
+
+- Basic functionality,
+- Artyicles rendering,
+- Styling adherring to the wireframes created.
+
+## Future Goals:
+
+- Comments section,
+- Sumissions,
+- Developed styling and animations throughout the website.
